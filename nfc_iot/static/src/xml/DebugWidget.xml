@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="NFCDebugWidget" t-inherit="point_of_sale.DebugWidget" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul" position="inside">
+            <li class="button nfc_poll" t-on-click="nfcPoll">
+                NFC Poll
+            </li>
+            <li>
+                <input t-model="state.nfcInput" type="text" class="nfc"></input>
+            </li>
+            <li class="button nfc_write" t-on-click="nfcWrite">
+                NFC Write
+            </li>
+        </xpath>
+    </t>
+</templates>
